@@ -92,7 +92,7 @@ def draw_buffers(
     legalize_graph(gm)
     gm.graph.lint()
     draw_graph(
-        gm, fname, clear_meta=False, dot_graph_shape=config.trace.dot_graph_shape
+        gm, fname, clear_meta=False
     )
 
 
@@ -518,7 +518,6 @@ class DebugFormatter:
             clear_meta=False,
             prog=GRAPHVIZ_COMMAND_SCALABLE,
             parse_stack_trace=True,
-            dot_graph_shape=config.trace.dot_graph_shape,
         )
 
     def output_code(self, filename: str) -> None:
